@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM"],
+    "jsxImportSource": "solid-js",
+    "jsx": "preserve",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "types": ["vite/client", "vitest", "solid-js"]
+  },
+  "include": ["src"],
+  "references": []
+}

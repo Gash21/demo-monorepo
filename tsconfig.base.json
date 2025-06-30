@@ -16,6 +16,10 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["development"]
+    "baseUrl": ".",
+    "paths": {
+      "@my-monorepo/react-libs": ["packages/react-libs/src/index.ts"],
+      "@my-monorepo/solid-libs": ["packages/solid-libs/src/index.ts"]
+    }
   }
 }
