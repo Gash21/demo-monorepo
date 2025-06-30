@@ -23,6 +23,6 @@
     "moduleResolution": "node",
     "jsxImportSource": "solid-js"
   },
-  "include": ["src/**/*"],
+  "include": ["src"],
   "references": []
 }

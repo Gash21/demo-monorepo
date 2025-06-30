@@ -1,4 +1,4 @@
-// apps/solid-host/src/index.tsx
+import './global.css';
 import { render } from 'solid-js/web';
 import App from './App';
 

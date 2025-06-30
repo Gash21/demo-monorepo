@@ -4,6 +4,7 @@ import solidPlugin from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import { federation } from '@module-federation/vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/apps/my-solid-app',
@@ -20,14 +21,15 @@ export default defineConfig({
     viteTsConfigPaths({
       root: '../../',
     }),
+    tailwindcss(),
     devtools(),
     solidPlugin(),
     federation({
       name: 'hostSolid',
       remotes: {
-        'solid-remote': { 
+        'solid-remote': {
           entry: 'http://localhost:4001/remoteEntry.js',
-          type: "esm"
+          type: 'esm',
         },
         // 'react-remote': 'http://localhost:4201/assets/remoteEntry.js',
       },

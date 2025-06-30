@@ -4,6 +4,7 @@ import solidPlugin from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
 import { federation } from '@module-federation/vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/apps/my-solid-app',
@@ -17,6 +18,7 @@ export default defineConfig({
   },
 
   plugins: [
+    tailwindcss(),
     viteTsConfigPaths({
       root: '../../',
     }),
@@ -26,11 +28,11 @@ export default defineConfig({
       name: 'solidRemote',
       filename: 'remoteEntry.js',
       exposes: {
-        './SolidRemote': './src/App.tsx'
+        './SolidRemote': './src/App.tsx',
       },
       runtime: 'vite', // makes it use native module format
-      format: 'esm'    // emit ESM (not UMD or var)
-    })
+      format: 'esm', // emit ESM (not UMD or var)
+    }),
   ],
 
   // Uncomment this if you are using workers.
