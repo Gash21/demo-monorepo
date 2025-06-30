@@ -28,10 +28,10 @@ export default defineConfig({
       name: 'solidRemote',
       filename: 'remoteEntry.js',
       exposes: {
-        './SolidRemote': './src/App.tsx',
+        './SolidRemote': './src/OrderSummary/index.tsx',
       },
-      runtime: 'vite', // makes it use native module format
-      format: 'esm', // emit ESM (not UMD or var)
+      runtime: 'vite',
+      format: 'esm',
     }),
   ],
 

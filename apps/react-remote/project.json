@@ -7,14 +7,16 @@
   "targets": {
     "build": {
       "executor": "@nx/rspack:rspack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "target": "web",
-        "outputPath": "apps/react-remote/dist",
+        "outputPath": "dist/apps/react-remote",
         "index": "apps/react-remote/src/index.html",
         "main": "apps/react-remote/src/main.tsx",
-        "tsConfig": "apps/react-remote/tsconfig.app.json",
+        "tsConfig": "apps/react-remote/tsconfig.json",
         "rspackConfig": "apps/react-remote/rspack.config.js",
         "assets": [
           "apps/react-remote/src/favicon.ico",
@@ -60,7 +62,9 @@
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "options": {
         "buildTarget": "@my-monorepo/react-remote:build",
         "spa": true
@@ -68,7 +72,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{projectRoot}/test-output/jest/coverage"],
+      "outputs": [
+        "{projectRoot}/test-output/jest/coverage"
+      ],
       "options": {
         "jestConfig": "apps/react-remote/jest.config.ts"
       }

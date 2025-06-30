@@ -1,5 +1,5 @@
 {
-  "name": "@my-monorepo/react-host",
+  "name": "react-host",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/react-host/src",
   "projectType": "application",
@@ -7,7 +7,9 @@
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -20,7 +22,9 @@
           "apps/react-host/src/favicon.ico",
           "apps/react-host/src/assets"
         ],
-        "styles": ["apps/react-host/src/styles.css"],
+        "styles": [
+          "apps/react-host/src/styles.css"
+        ],
         "scripts": [],
         "webpackConfig": "apps/react-host/webpack.config.ts",
         "postcssConfig": "apps/react-host/postcss.config.js"
@@ -48,7 +52,10 @@
           "webpackConfig": "apps/react-host/webpack.config.prod.ts"
         }
       },
-      "dependsOn": ["^build", "typecheck"]
+      "dependsOn": [
+        "^build",
+        "typecheck"
+      ]
     },
     "serve": {
       "executor": "@nx/react:module-federation-dev-server",
@@ -56,7 +63,7 @@
       "options": {
         "buildTarget": "react-host:build",
         "hmr": true,
-        "port": 4200
+        "port": 4002
       },
       "configurations": {
         "development": {
@@ -67,7 +74,9 @@
           "hmr": false
         }
       },
-      "dependsOn": ["typecheck"]
+      "dependsOn": [
+        "typecheck"
+      ]
     },
     "lint": {
       "executor": "@nx/eslint:lint"
@@ -89,7 +98,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{projectRoot}/test-output/jest/coverage"],
+      "outputs": [
+        "{projectRoot}/test-output/jest/coverage"
+      ],
       "options": {
         "jestConfig": "apps/react-host/jest.config.ts"
       }

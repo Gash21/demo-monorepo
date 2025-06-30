@@ -27,7 +27,7 @@
     "eslint.config.cjs",
     "eslint.config.mjs"
   ],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "../../packages/solid-libs/**/*"],
   "references": [
     {
       "path": "../../packages/solid-libs/tsconfig.lib.json"

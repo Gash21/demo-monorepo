@@ -31,7 +31,10 @@ export default defineConfig({
           entry: 'http://localhost:4001/remoteEntry.js',
           type: 'esm',
         },
-        // 'react-remote': 'http://localhost:4201/assets/remoteEntry.js',
+        'react-remote': {
+          entry: 'http://localhost:4003/remoteEntry.js',
+          type: 'esm',
+        },
       },
     }),
   ],
