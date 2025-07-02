@@ -7,7 +7,7 @@ import { ReactWrapper } from '../components/ReactWrapper';
 // });
 
 const ReactComp: Component = () => {
-  const [mod] = createResource(() => import('react-remote/ReactRemote'));
+  const [mod] = createResource(() => import('react_remote/ReactRemote'));
 
   return (
     <Show when={mod()}>{(m) => <ReactWrapper component={m()?.default} />}</Show>

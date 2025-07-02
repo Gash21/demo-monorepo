@@ -27,18 +27,18 @@ export default defineConfig({
     federation({
       name: 'hostSolid',
       remotes: {
-        'solid-remote': {
+        solid_remote: {
           entry: 'http://localhost:4001/remoteEntry.js',
           type: 'esm',
         },
-        'react-remote': {
+        react_remote: {
           entry: 'http://localhost:4003/remoteEntry.js',
-          type: 'esm',
+          type: 'var',
+          from: 'webpack',
         },
       },
     }),
   ],
-
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [

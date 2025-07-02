@@ -3,7 +3,7 @@ import OrderList, { OrderItem } from '../components/OrderList';
 import ReactComp from './ReactComp';
 
 const SolidRemote = lazy(async () => {
-  const OrderSummary = await import('solid-remote/SolidRemote');
+  const OrderSummary = await import('solid_remote/SolidRemote');
   return OrderSummary;
 });
 

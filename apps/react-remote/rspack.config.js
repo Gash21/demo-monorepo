@@ -11,11 +11,6 @@ module.exports = composePlugins(withNx(), withReact(), (config) => {
     ...config.output,
     uniqueName: 'react_remote',
     publicPath: 'http://localhost:4003/',
-    module: true,
-  };
-  config.experiments = {
-    ...config.experiments,
-    outputModule: true,
   };
 
   config.plugins ??= [];
