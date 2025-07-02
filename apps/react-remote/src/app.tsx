@@ -1,7 +1,9 @@
+import { ReactLibs } from '@demo/react-libs';
+
 const App = () => {
   return (
     <div>
-      <h1>React Remote</h1>
+      <ReactLibs>React Remote</ReactLibs>
     </div>
   );
 };

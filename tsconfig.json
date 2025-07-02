@@ -13,10 +13,10 @@
       "path": "./apps/react-remote"
     },
     {
-      "path": "./apps/react-remote-2"
+      "path": "./packages/react-libs"
     },
     {
-      "path": "./packages/react-libs"
+      "path": "./packages/solid-libs"
     }
   ]
 }

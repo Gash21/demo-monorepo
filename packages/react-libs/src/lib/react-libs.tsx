@@ -1,7 +1,7 @@
-import styles from './react-libs.module.css';
+import { HTMLProps } from 'react';
 
-export function ReactLibs(props: { children: React.ReactNode }) {
-  return <div className={styles['container']}>{props.children}</div>;
+export function ReactLibs(props: HTMLProps<'h1'>) {
+  return <h1 {...props}>{props.children}</h1>;
 }
 
 export default ReactLibs;

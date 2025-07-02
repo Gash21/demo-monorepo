@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -12,7 +15,7 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudId": "686556fa7b6e75104b6c3ca3",
+  "nxCloudId": "686023164d722945e2124543",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",

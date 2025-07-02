@@ -1,19 +1,18 @@
-import { createResource, Show, Suspense } from 'solid-js';
+import { createResource, lazy, Show, Suspense } from 'solid-js';
 import { ReactWrapper } from './components/ReactWrapper';
+
+const SolidRemote = lazy(() => import('solid-remote/SolidRemote'));
 
 export const App = () => {
   const [remote] = createResource(() => import('react-remote/ReactRemote'));
-  const [remote2] = createResource(() => import('react-remote-2/ReactRemote2'));
   return (
     <div>
       <h1>App</h1>
       <Suspense>
-        <Show when={remote()}>
-          {(m) => <ReactWrapper component={m()?.default} />}
-        </Show>
+        <SolidRemote />
       </Suspense>
       <Suspense>
-        <Show when={remote2()}>
+        <Show when={remote()}>
           {(m) => <ReactWrapper component={m()?.default} />}
         </Show>
       </Suspense>

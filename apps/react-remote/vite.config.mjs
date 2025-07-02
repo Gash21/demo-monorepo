@@ -38,7 +38,7 @@ export default defineConfig(() => ({
     react(),
   ],
   build: {
-    target: 'esnext', // ✅ allow top-level await
+    target: 'esnext',
     outDir: './dist',
     emptyOutDir: true,
     reportCompressedSize: true,

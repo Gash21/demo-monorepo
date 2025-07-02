@@ -10,7 +10,7 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/apps/solid-host',
 
   server: {
-    port: 4000,
+    port: 4001,
   },
 
   build: {
@@ -24,16 +24,12 @@ export default defineConfig({
     solidPlugin(),
     federation({
       name: 'solid-host',
-      remotes: {
-        'react-remote': {
-          entry: 'http://localhost:4003/remoteEntry.js',
-          type: 'esm',
-        },
-        'solid-remote': {
-          entry: 'http://localhost:4001/remoteEntry.js',
-          type: 'esm',
-        },
+      filename: 'remoteEntry.js',
+      exposes: {
+        './SolidRemote': './src/app.tsx',
       },
+      runtime: 'vite',
+      format: 'esm',
     }),
   ],
 
