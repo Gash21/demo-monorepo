@@ -2,5 +2,21 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/solid-host"
+    },
+    {
+      "path": "./apps/solid-remote"
+    },
+    {
+      "path": "./apps/react-remote"
+    },
+    {
+      "path": "./apps/react-remote-2"
+    },
+    {
+      "path": "./packages/react-libs"
+    }
+  ]
 }

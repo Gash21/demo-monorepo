@@ -1,0 +1,8 @@
+{
+  "name": "@demo/react-remote-2",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "react-remote-2"
+  }
+}
