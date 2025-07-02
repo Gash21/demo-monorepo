@@ -12,6 +12,7 @@
       "@nx/react/typings/image.d.ts"
     ],
     "module": "esnext",
+    "target": "es2020",
     "moduleResolution": "bundler",
     "composite": true
   },

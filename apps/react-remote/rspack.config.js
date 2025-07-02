@@ -14,7 +14,8 @@ module.exports = composePlugins(withNx(), withReact(), (config) => {
     module: true,
   };
   config.experiments = {
-    outputModule: true, // ✅ enables ESM chunk generation
+    ...config.experiments,
+    outputModule: true,
   };
 
   config.plugins ??= [];
@@ -23,14 +24,16 @@ module.exports = composePlugins(withNx(), withReact(), (config) => {
       name: 'react_remote',
       filename: 'remoteEntry.js',
       exposes: {
-        './ReactRemote': './src/app.tsx',
+        './ReactRemote': './src/components/AddressDetail/index.tsx',
       },
+
       shared: {
         react: { singleton: true, eager: true },
         'react-dom': { singleton: true, eager: true },
       },
       library: {
-        type: 'module',
+        type: 'var',
+        name: 'react_remote',
       },
     })
   );
