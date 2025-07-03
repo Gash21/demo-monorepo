@@ -7,13 +7,8 @@
     "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
     "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["ESNext", "DOM"],
-    "jsxImportSource": "solid-js",
-    "jsx": "preserve",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "types": ["node", "vite/client", "solid-js"]
+    "types": ["node", "vite/client"]
   },
-  "include": ["src/**/*.ts", "src/lib/solid-libs.tsx"],
+  "include": ["src/**/*.ts"],
   "references": []
 }

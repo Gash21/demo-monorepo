@@ -21,5 +21,9 @@
     "types": ["vite/client", "vitest", "solid-js"]
   },
   "include": ["src"],
-  "references": []
+  "references": [
+    {
+      "path": "../../packages/solid-libs"
+    }
+  ]
 }

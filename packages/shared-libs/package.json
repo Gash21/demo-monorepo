@@ -1,5 +1,5 @@
 {
-  "name": "@demo/solid-libs",
+  "name": "@demo/shared-libs",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -18,13 +18,7 @@
     "!**/*.tsbuildinfo"
   ],
   "nx": {
-    "name": "solid-libs"
+    "name": "shared-libs"
   },
-  "dependencies": {
-    "solid-js": "^1.7.10",
-    "solid-js/web": "^1.7.10"
-  },
-  "devDependencies": {
-    "@solid-tools/vite": "^1.0.0"
-  }
+  "dependencies": {}
 }

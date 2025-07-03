@@ -2,13 +2,11 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
-import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/solid-libs',
+  cacheDir: '../../node_modules/.vite/packages/shared-libs',
   plugins: [
-    solidPlugin(),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
@@ -30,7 +28,7 @@ export default defineConfig(() => ({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'solid-libs',
+      name: 'shared-libs',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
